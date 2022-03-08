@@ -8,6 +8,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
+      .container{
+        margin-left:20px;
+        margin-top:10px;
+      }
     </style>
     <title>Home Page</title>
   </head>
@@ -44,6 +48,31 @@
               </div>
             </div>
           </nav>
+      </div>
+
+      <div class="container">
+        <div class="row" >
+          <div class="col-9" >
+            <strong><h2>Git</h2></strong></br>
+            <h4>What is Git?</h4>
+            <p>Git hub is a software that keeps track of the changes in your files or directories, usually while programmers are developing sourcecode for an application.</p>
+            <h4>What is GitHub?</h4>
+            <p>GitHub is a repository hosting service where you can store your files/projects while taking advantage of the version control software Git.</p>
+            <h4>Some git commands...</h4>
+            <h6>git add</h6>
+            <p>After you add a new file to your repository that file is untracked by the git version control or when you make a change to a file that file is marked as modified by git and that change in the file needs to be tracked by git, "git add ." makes it so that all the new changes (including addition of new files) in the current directory (hence the use of ".") are now tracked and ready to be commited.</p>
+            <h6>git commit</h6>
+            <p>After you are done modifying the files you would like to save these changes to the repository on github. 'git commit -m "insert message" ' are the "saves" or changes that everyone in that repository sees. If you have only made changes to files and not added new files you can commit without running "git add" if you use the -a option to tell git to track the new changes in the files and commit them.</p>
+            <h6>git push</h6>
+            <p>After commiting you need to push or upload your changes to Github so everyone else working in that directory can see what changes you have made and if they are good enough to be included in the main project. git push requires the remote (alias) of the repository you would like to push your commits to, and also the branch you'd in that repository you'd like to push them to. "git push origin main"</p>
+            <h6>some more...</h6>
+            <p>To prevent the headache of everyone working on the same code and changing it all at once, they can create a new branch by using the "git branch 'newbranch'" command and use the "git checkout 'createdbranch'" to work on that branch. The benefit of this is when you are done working, adding a feature or fixing a bug, you'd create a pull request to the owner's of the repository for your branch to be merged to the main branch (you code to be added to their main code, while getting rid of conflicts)</p>
+          </div>
+          <div class="col" style="margin-left:10px;">
+            <u><i><h4>Links</h4></i></u>
+              <a href="https://docs.github.com/en/get-started" target="_blank">Github</a>
+          </div>
+        </div>
       </div>
 
 

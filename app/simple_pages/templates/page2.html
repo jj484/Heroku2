@@ -1,4 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 2
+<div class="container">
+    <div class="row" >
+    <div class="col-9" >
+        <strong><h2>Docker</h2></strong></br>
+        <h4>What is Docker?</h4>
+        <p>Docker is platform that allows us to build and run containers which is an OS-level virtualization which allows us to run application.</p>
+        <h4>What is an Image?</h4>
+        <p>The simplest way to put it would be, an image is a blueprint to build a container, and the image would conatin what libraries, tools or other images are needed to build that container.</p>
+        <h4>What is a container?</h4>
+        <p>A container in the simplest terms would be an OS-level virtualization, and they are many of times better than kernel level virtual machines, since it is much more easier to replace a container than a computer running virtual machines. </p>
+        <h4>Dockerfile and docker-compose.yml</h4>
+        <p>A Dockerfile has instructions that automates the proecess of creating an image for a certain app, and a docker-compose.yml is the file that automamtes the process of building and running a container ("docker compose" is the command too use to use the docker-compose.yml file to build and run the container).</p>
+        <h4>Some docker comm</h4>
+        <h6>docker ps</h6>
+        <p>Shows what containers are currently running (use -a option to show all containers)</p>
+        <h6>docker run -dp 80:80 ubuntu:latest</h6>
+        <p>Find the image called ubuntu:latest and use it to build and run a container where port 80 of your physical machine is being used by the the containers port 80.</p>
+        <h4>Run project locally...</h4>
+        <p>If you have a docker-compose.yml file you can run the docker compose up --build command to run and build the container which will run your app, and to if the docker-compose.yaml file runs the container with the "-i" option the you will be able to use the containers terminal from the terminal you ran the compose command from. If you do not have a compose file you can use the "docker run" command with the "-i" option to interact with the containers terminal on your terminal.</p>
+
+        <h4>Link to the image used to build this app...</h4>
+        <p><a href="https://hub.docker.com/repository/docker/preet5/proj1-flaskapp">https://hub.docker.com/repository/docker/preet5/proj1-flaskapp</a></p>
+
+    </div>
+    <div class="col" style="margin-left:10px;">
+        <u><i><h4>Links</h4></i></u>
+        <a href="https://docs.docker.com/get-started/" target="_blank">Docker</a>
+    </div>
+    </div>
+</div>
 {% endblock %}
