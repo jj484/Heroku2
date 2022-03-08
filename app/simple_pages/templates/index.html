@@ -1,4 +1,113 @@
-{% extends "base.html" %}
-{% block content %}
-    Index Page
-{% endblock %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: darkgrey;
+        }
+        .carousel{
+            margin-left: auto;
+            margin-right:auto;
+        }
+    </style>
+    <title>Home Page</title>
+  </head>
+  <body>
+      <div class="navcontainer">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              
+              <a class="navbar-brand" href="#" style="margin-right:100px; font-size:30px">Preetpal Singh</a>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:150%">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto mb-5 mb-lg-0" style="font-size:150%">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">GIT</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Docker</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Python/Flask</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">CI/Cl</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </nav>
+      </div>
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <a href="{{ url_for('simple_pages.show', page="page1")}}">
+                <div class="carousel-item active">
+                    <img src="https://cybersafe.news/wp-content/uploads/2020/11/github-1200x675.png" class="d-block w-100" alt="Github">
+                    <div class="carousel-caption d-none d-md-block" style="color:white;">
+                        <h3>Github</h3>
+                    </div>
+                </div>
+            </a>
+          <a href="{{ url_for('simple_pages.show', page="page2")}}">
+            <div class="carousel-item">
+                <img src="https://i.ytimg.com/vi/4I8CRAzPLD4/maxresdefault.jpg" class="d-block w-100" alt="Docker">
+                <div class="carousel-caption d-none d-md-block" style="color:black;" >
+                    <h3>Docker</h3>
+                </div>
+            </div>
+          </a>
+          <a href="{{ url_for('simple_pages.show', page="page3")}}">
+              <div class="carousel-item">
+                <img src="https://nordicapis.com/wp-content/uploads/How-to-Create-an-API-Using-The-Flask-Framework.png" class="d-block w-100" alt="Flask">
+                <div class="carousel-caption d-none d-md-block" style="color:black;">
+                    <h3>Python / Flask</h3>
+                </div>
+              </div>
+          </a>
+          <a href="{{ url_for('simple_pages.show', page="page4")}}">
+              <div class="carousel-item">
+                <img src="https://raybogman.com/assets/images/16x9/jekyll-travis-lighthouse-heroku-ci-cd.jpg" class="d-block w-100" alt="CI/CD">
+                <div class="carousel-caption d-none d-md-block" style="color:black;">
+                    <h3>Continuos Integratin / Continuos Development</h3>
+                </div>
+              </div>
+          </a>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
