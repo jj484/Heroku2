@@ -1,0 +1,38 @@
+{% extends "tech_index.html" %}
+{% block content %}
+        <div class="container">
+            <img src="https://pythonforundergradengineers.com/posts/git/images/git_and_github_logo.png"/>
+            <hr/>
+            <div class="row" >
+                <div class="col-9" >
+                    <i><h3>What is Git?</h3></i>
+                    <p>"Git is a free and open source distributed version control system" that helps manage and keep track of the changes made in a project, large or small.  </p>
+                    <i><h3>What is GitHub?</h3></i>
+                    <p>GitHub is a Git repository hosting service where you can store and work on your files/projects with other people who have access to your repository, while taking advantage of the version control software Git.</p>
+                    <i><h3>What is a GitHub Repository?</h3></i>
+                    <p>A repository is a place or structure to store things (usually resources). A GitHub repository is the same, as in it stores your files, folders, projects, etc. while letting you track and manage the changes in your files.</p>
+                    <i><h3>Some git commands...</h3></i>
+                    <h5>git add</h5>
+                    <p>After you add a new file to your repository that file is untracked by the git version control or when you make a change to a file that file is marked as modified by git and that change in the file needs to be tracked by git, "git add ." makes it so that all the new changes (including addition of new files) in the current directory (hence the use of ".") are now tracked and ready to be commited.</p>
+                    <h5>git commit</h5>
+                    <p>After you are done modifying the files you would like to save these changes to the repository on github. 'git commit -m "insert message" ' are the "saves" or changes that everyone in that repository sees. If you have only made changes to files and not added new files you can commit without running "git add" if you use the -a option to tell git to track the new changes in the files and commit them.</p>
+                    <h5>git push</h5>
+                    <p>After commiting you need to push or upload your changes to Github so everyone else working in that directory can see what changes you have made and if they are good enough to be included in the main project. git push requires the remote (alias) of the repository you would like to push your commits to, and also the branch you'd in that repository you'd like to push them to. "git push origin main"</p>
+                    <h5>git branch -> git checkout -> git merge</h5>
+                    <p>Working on and making changes in the same files and causing conflicts in the files causes unnecessary headaches, so Git allows takes into account these conflicts before the new changes are merged into the main set of files. Git allows users create a new branch by using the "git branch 'newbranch'" command and use the "git checkout 'createdbranch'" to work on that branch. The benefit of this is when you are done working on the new branch (maybe  after you are done adding a feature or fixing a bug), you'd create a pull request (asking to merge your files into the main files) in the repository to the those who have the permission, in that repository, to merge your branch into the main branch. </br>If you have the permisision yourself there is command for you to merge the changes you made in a different branch to the main branch by using the "git merge" command. After you are done working in the new branch switch to the branch you would like to merge to and enter "git merge" and the name of the branch you worked and commited changes on.</p>
+                </div>
+                <div class="col" style="margin-left:10px;">
+                    <strong><i><h4>Links</h4></i></strong>
+                    <hr/>
+                    <ul>
+                        <li>
+                            <a href="https://git-scm.com/" target="_blank">Git</a> </br>
+                        </li>
+                        <li>
+                            <a href="https://docs.github.com/en/get-started" target="_blank">Github</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+{% endblock %}

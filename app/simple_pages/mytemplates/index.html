@@ -1,0 +1,56 @@
+{% extends "tech_index.html" %}
+{% block head %}
+<style>
+  .carousel{
+    background-color: black
+  }
+  .carousel-item{
+    height: 44rem;
+    opacity: 0.9;
+  }
+  .carousel-item:hover{
+    opacity: 0.65;
+  }
+  .carousel-item img{
+    height: 44rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="carousel-container">
+  <div id="mycarousel" class="carousel carousel-dark slide" data-bs-ride="carousel" >
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="{{ url_for('simple_pages.show', page="git")}}" ><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625556669931/sM0Fq3Mle9.png" class="d-block w-100" alt="..."></a>
+        </div>
+        <div class="carousel-item">
+          <a href="{{ url_for('simple_pages.show', page="docker")}}" ><img src="https://i.ytimg.com/vi/4I8CRAzPLD4/maxresdefault.jpg" class="d-block w-100" alt="..."></a>
+        </div>
+        <div class="carousel-item">
+          <a href="{{ url_for('simple_pages.show', page="flask")}}" ><img src="https://nordicapis.com/wp-content/uploads/How-to-Create-an-API-Using-The-Flask-Framework.png" class="d-block w-100" alt="..."></a>
+        </div>
+        <div class="carousel-item">
+          <a href="{{ url_for('simple_pages.show', page="cicd")}}" ><img src="https://i.morioh.com/210428/2f9c86a4.webp" class="d-block w-100" alt="..."></a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>
+{% endblock %}

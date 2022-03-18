@@ -13,9 +13,9 @@
         <h4>Dockerfile and docker-compose.yml</h4>
         <p>A Dockerfile has instructions that automates the proecess of creating an image for a certain app, and a docker-compose.yml is the file that automamtes the process of building and running a container ("docker compose" is the command too use to use the docker-compose.yml file to build and run the container).</p>
         <h4>Some docker comm</h4>
-        <h6>docker ps</h6>
+        <h5>docker ps</h5>
         <p>Shows what containers are currently running (use -a option to show all containers)</p>
-        <h6>docker run -dp 80:80 ubuntu:latest</h6>
+        <h5>docker run -dp 80:80 ubuntu:latest</h5>
         <p>Find the image called ubuntu:latest and use it to build and run a container where port 80 of your physical machine is being used by the the containers port 80.</p>
         <h4>Run project locally...</h4>
         <p>If you have a docker-compose.yml file you can run the docker compose up --build command to run and build the container which will run your app, and to if the docker-compose.yaml file runs the container with the "-i" option the you will be able to use the containers terminal from the terminal you ran the compose command from. If you do not have a compose file you can use the "docker run" command with the "-i" option to interact with the containers terminal on your terminal.</p>
