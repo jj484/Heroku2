@@ -1,0 +1,62 @@
+{% extends "tech_index.html" %}
+{% block head %}
+<style>
+    .pageimg {
+        margin-top:10px;
+        margin-bottom:10px;
+        height:300px; 
+        width: 1280px; 
+        object-fit: cover; 
+        object-position: 50% 40%;
+    }   
+    
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <img class="pageimg" src="https://nepal.introcept.co/wp-content/uploads/2017/01/docker-wallpaper-black.jpg">
+        <hr/>
+        <div class="col-9" >
+            <i><h3>What is Docker?</h3></i>
+            <p>Docker is platform that allows us to build, run and ship running applications.</p>
+            <i><h3>What is an Image?</h3></i>
+            <p>The simplest way to put it would be, an image is a blueprint to build a container, and the image would conatin what libraries, tools or other images are needed to build that container.</p>
+            <i><h3>What is a container?</h3></i>
+            <p>A container in the simplest terms would be an OS-level virtualization, and they are many of times better than kernel level virtual machines, since it is much more easier to replace a container than a computer running virtual machines. </p>
+            <i><h3>Docker commands and examples</h3></i>
+            <h5>docker run -dp 80:80 ubuntu:latest</h5>
+            <p>Find the image called ubuntu:latest and use it to build and run a container, and port 80 of your physical machine is being used by the the container's port 80.</p>
+            <h5>docker build -t "tagname"</h5>
+            <p>This command builds an image by using the instructions in a file called Docker </p>
+            <h5>Dockerfile & docker-compose.yml</h5>
+            <p>A Dockerfile has instructions that automates the proecess of creating an image, so that image can be used to create a container that runs an application, and a docker-compose.yml is the file that automamtes the process of building and running a container ("docker compose" is the command too use to use the docker-compose.yml file to build and run the container).</p>
+            <h5>docker ps</h5>
+            <p>Shows what containers are currently running (use -a option to show all containers)</p>
+            <h5>docker stop</h5>
+            <p>Use "docker stop 'container id/name'" to stop the container if it is running at that moment.</p>
+            <h5>docker rm</h5>
+            <p>Use "docker rm 'container id/name' " to delete a container.</p>
+            <h5>docker image rm</h5>
+            <p>Use this command to delete any docker image that's on your system.</p>
+            <h5>docker logs</h5>
+            <p>Use "docker logs 'container id/name'" to retrieve the logs that the container has made so far (use the -f option after "docker logs" to follow the logs as they are happening).</p>
+            <h5>Run project locally...</h5>
+            <p>If you have a docker-compose.yml file you can run the docker compose up --build command to run and build the container which will run your app, and to if the docker-compose.yaml file runs the container with the "-i" option the you will be able to use the containers terminal from the terminal you ran the compose command from. If you do not have a compose file you can use the "docker run" command with the "-i" option to interact with the containers terminal on your terminal.</p>
+            <h5>Dockerhub Repositories</h5>
+            <p>Dockerhub is a library for container images, you can pull images from DockerHub to your local machine by using the command "docker pull". If you would like to upload your images to DockerHub, login in to docker via the terminal or the desktop app and then create a DockerHub respository and replace the name of the image you want to push with your DockerHub username and repository by using "docker tag", then use the command "docker push 'image name'". </p>
+            
+        </div>
+        <div class="col" style="margin-left:20px;">
+            <strong><i><h3>Links</h3></i></strong>
+            <hr/>
+            <ul>
+                <li><a href="https://docs.docker.com/get-started/" target="_blank">Docker: Getting Started</a></li>
+                <li><a href="https://hub.docker.com/repository/docker/preet5/proj1-flaskapp">Image used for this site</a></li>
+            </ul>
+            <br/>
+        </div>
+    </div>
+</div>
+{% endblock %}
